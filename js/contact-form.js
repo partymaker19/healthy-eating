@@ -8,15 +8,35 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  // Идентификатор формы Formspree для деплоя на GitHub Pages
+  // ВАЖНО: замените "your_form_id" на реальный ID из Formspree (например: "xyzabcd")
+  const FORMSPREE_ID = "your_form_id";
+
   function resolveEndpoint() {
     const host = window.location.hostname || "";
-    // На GitHub Pages нет backend'а — используем Formspree-заглушку
+    // На GitHub Pages нет backend'а — используем Formspree
     if (host.includes("github.io")) {
-      return "https://formspree.io/f/your_form_id";
+      return `https://formspree.io/f/${FORMSPREE_ID}`;
     }
     // В остальных случаях (локально, Vercel, свой домен на Vercel) — серверлесс-функция
     return "/api/send-email";
   }
+
+  // Если сайт открыт на GitHub Pages и ID формы не настроен — покажем подсказку и отключим сабмит
+  (function guardFormspreeNotConfigured() {
+    const host = window.location.hostname || "";
+    if (host.includes("github.io") && FORMSPREE_ID === "your_form_id") {
+      showStatus(
+        "Форма временно недоступна на GitHub Pages. Настройте Formspree (замените your_form_id на ваш ID), либо используйте Vercel для бэкенда.",
+        "error"
+      );
+      const submitBtn = form.querySelector(".contacts__form-btn");
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.title = "Требуется настроить Formspree для GitHub Pages";
+      }
+    }
+  })();
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -55,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify({
           name: name,
