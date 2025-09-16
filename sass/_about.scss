@@ -1,0 +1,205 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+
+  &__block-img {
+    border-radius: 0 0 50px 0;
+    width: 849px;
+    height: 732px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 100%;
+    }
+    background-color: $color-green-light;
+    box-shadow: var(--shadow-md);
+  }
+
+  &__title {
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 2em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: $color-underline;
+    -moz-text-decoration-color: $color-underline;
+  }
+
+  &__desc {
+    font-family: $font-urbanist;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    padding-bottom: 0.3em;
+    margin-top: 10px;
+  }
+
+  &__desc-text {
+    font-family: $font-urbanist;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  &__name {
+    color: $color-green-medium;
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out),
+      background-color 0.3s var(--ease-out);
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s var(--ease-out);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+        background: rgba(203, 234, 123, 0.25);
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-md);
+        background: rgba(203, 234, 123, 0.25);
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &__serf-block {
+    width: 600px;
+    height: 400px;
+    margin-top: 25px;
+    box-shadow: var(--shadow-sm);
+    border-radius: 12px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 5%;
+
+    &__block-text {
+      display: contents;
+    }
+
+    &__text-content {
+      order: 1;
+    }
+
+    // Фото девушки должно быть вторым
+    &__block-img {
+      order: 2;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      aspect-ratio: 849/732;
+      margin: 0 auto;
+    }
+
+    // Сертификат — третьим
+    &__serf-block {
+      order: 3;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      aspect-ratio: 3/2;
+      margin: 0 auto;
+    }
+
+    .modal {
+      order: 4;
+    }
+
+    &__social-link {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 30px;
+    padding: 0 4%;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__desc {
+      font-size: 22px;
+    }
+
+    &__desc-text {
+      font-size: 16px;
+    }
+
+    &__serf-block {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 16/10;
+    }
+
+    &__block-img {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 3%;
+    gap: 25px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__desc {
+      font-size: 18px;
+    }
+
+    &__desc-text {
+      font-size: 14px;
+    }
+
+    &__serf-block {
+      height: auto;
+      aspect-ratio: 4/3;
+    }
+  }
+}

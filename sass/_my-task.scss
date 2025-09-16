@@ -1,0 +1,100 @@
+.my-task {
+  background: $color-light;
+  margin-top: 60px;
+  padding: 60px 5%;
+  &__img-text-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 100px;
+  }
+
+  &__block-img {
+    width: 30%;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease-out), filter 0.5s var(--ease-out);
+    }
+
+    @media (hover: hover) {
+      &:hover img {
+        transform: scale(1.03);
+        filter: saturate(1.05);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 2.5em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: $color-underline;
+    -moz-text-decoration-color: $color-underline;
+  }
+
+  &__text {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: $color-text-secondary;
+    li {
+      list-style: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 4%;
+
+    &__img-text-block {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    &__block-img {
+      width: 80%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+    padding: 30px 3%;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__block-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 3%;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}

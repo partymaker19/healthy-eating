@@ -1,0 +1,289 @@
+@use "sass:color";
+.contacts {
+  background-color: $color-light;
+  margin-top: 24px;
+
+  &__intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-top: 30px;
+    text-align: center;
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 2.5em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: $color-underline;
+    -moz-text-decoration-color: $color-underline;
+  }
+
+  &__desc {
+    font-family: $font-urbanist;
+    font-size: 18px;
+    color: $color-text-secondary;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__social {
+    flex: 1;
+    margin-right: 40px;
+  }
+
+  &__social-title {
+    font-family: $font-urbanist;
+    font-size: 24px;
+    color: $color-text-primary;
+    margin-bottom: 20px;
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+    text-decoration: none;
+    font-family: $font-urbanist;
+    font-size: 16px;
+    transition: background-color 0.3s var(--ease-out), color 0.3s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgba($color-primary, 0.1);
+        color: $color-primary;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+        border-color: rgba($color-primary, 0.2);
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        background-color: rgba($color-primary, 0.1);
+        color: $color-primary;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-sm);
+        border-color: rgba($color-primary, 0.2);
+      }
+    }
+
+    img {
+      margin-right: 12px;
+      width: 32px;
+      height: 32px;
+      transition: transform 0.2s var(--ease-out);
+    }
+
+    @media (hover: hover) {
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__form-wrapper {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #eef8d3;
+  }
+
+  &__form-title {
+    font-family: $font-urbanist;
+    font-size: 24px;
+    color: $color-text-primary;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-label {
+    font-family: $font-urbanist;
+    font-size: 16px;
+    color: $color-text-primary;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  &__form-input,
+  &__form-textarea {
+    font-family: $font-urbanist;
+    padding: 15px;
+    border: 2px solid #e8f4d0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), transform 0.1s var(--ease-out);
+    background: #fafcf6;
+
+    &:focus {
+      outline: none;
+      border-color: $color-accent;
+      box-shadow: 0 0 0 3px rgba($color-accent, 0.2);
+      transform: translateY(-1px);
+      background: #fff;
+    }
+
+    &::placeholder {
+      color: $color-text-muted;
+    }
+  }
+
+  &__form-textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  &__form-btn {
+    font-family: $font-urbanist;
+    padding: 16px 32px;
+    background-color: $color-accent;
+    color: $color-text-primary;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+    width: 200px;
+    align-self: center;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-accent-hover;
+        color: $color-dark;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        background-color: $color-accent-hover;
+        color: $color-dark;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-sm);
+      }
+    }
+  }
+
+  &__form-status {
+    font-family: $font-urbanist;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    
+    &.success {
+      background: rgba($color-accent, 0.15);
+      color: $color-primary;
+      border: 1px solid rgba($color-accent, 0.3);
+    }
+    
+    &.error {
+      background: rgba(#ff6b6b, 0.15);
+      color: #d63031;
+      border: 1px solid rgba(#ff6b6b, 0.3);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 4%;
+    &__form-wrapper {
+      padding: 24px 20px;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__social {
+      padding: 0 20px;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 3%;
+    &__title {
+      font-size: 26px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+
+    &__social-title,
+    &__form-title {
+      font-size: 20px;
+    }
+
+    &__form-input,
+    &__form-textarea,
+    &__form-btn {
+      font-size: 14px;
+      padding: 12px;
+    }
+
+    &__form-wrapper {
+      padding: 20px 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 3%;
+    margin-top: 20px; // slightly smaller gap on very small screens
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+
+    &__social-title,
+    &__form-title {
+      font-size: 18px;
+    }
+
+    &__form-input,
+    &__form-textarea,
+    &__form-btn {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    &__form-wrapper {
+      padding: 16px 12px;
+    }
+  }
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sass/normalize.css">
+  <link rel="stylesheet" href="sass/style.css">
+  <title>Нутрициолог Анна</title>
+  <link rel="icon" href="img/icons8-здоровое-питание-16.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo-block">
+      <div class="header__logo-img">
+        <img src="img/logo.png" alt="logo">
+      </div>
+      <div class="header__logo-text">
+        <p class="header__logo-name">Нутрициолог</p>
+      </div>
+    </div>
+    <div class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#about">Обо мне</a></li>
+        <li class="header__nav-item"><a href="#features">Услуги</a></li>
+        <li class="header__nav-item"><a href="#pricing">Прайс-лист</a></li>
+        <li class="header__nav-item"><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="burger-menu" id="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="#about">Обо мне</a></li>
+        <li class="mobile-nav__item"><a href="#features">Услуги</a></li>
+        <li class="mobile-nav__item"><a href="#pricing">Прайс-лист</a></li>
+        <li class="mobile-nav__item"><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section id="about" class="about">
+      <div class="about__block-img">
+        <img src="img/about-img.png" alt="about-img">
+      </div>
+      <div class="about__block-text">
+        <div class="about__text-content">
+          <div class="about__social">
+            <a href="https://instagram.com/lapkaann" class="about__social-link" target="_blank" rel="noopener"
+              aria-label="Instagram">
+              <img src="img/icons8-instagram-72.png" alt="instagram">
+            </a>
+            <a href="https://t.me/lapkaann" class="about__social-link" target="_blank" rel="noopener"
+              aria-label="Telegram">
+              <img src="img/icons8-телеграм-72.png" alt="telegram">
+            </a>
+          </div>
+          <h2 class="about__title">Измените свое ❤️ здоровье с помощью</h2>
+          <h1 class="about__desc">персонализированного коучинга <br> по питанию</h1>
+          <p class="about__desc-text">
+            Я, <span class="about__name">Анна</span>, серцифицированный нутрициолог. <br> Я тот специалист, который не
+            будет тебя ограничивать в питании,
+            а
+            поможет найти
+            баланс.
+          </p>
+        </div>
+        <div class="about__serf-block">
+          <img src="img/photo_2024-06-27_16-31-42.jpg" alt="serf-img" id="serf-thumb">
+        </div>
+        <div class="modal" id="serf-modal">
+          <span class="modal__close" id="serf-modal-close">&times;</span>
+          <img class="modal__img" src="img/photo_2024-06-27_16-31-42.jpg" alt="serf-img-large">
+        </div>
+      </div>
+    </section>
+    <section class="my-task">
+      <h2 class="my-task__title">Мои задачи</h2>
+      <div class="my-task__img-text-block">
+        <div class="my-task__block-text">
+          <p class="my-task__text">Объяснить, как ваш образ жизни и питание влияют на состояние вашего здоровья и ваш
+            внешний вид.</p>
+          <ul class="my-task__text">
+            <li>✅Никаких жёстких ограничений и рамок — только осознанный подход и постепенное внедрение полезных
+              привычек.</li>
+            <li>✅Рацион станет разнообразнее, иммунитет — крепче, а тяга к сладкому постепенно исчезнет. <br>
+              Вместе мы
+              закроем дефициты и
+              улучшим общее самочувствие.</li>
+            <li>✅Вы освоите основы здорового образа жизни без перегрузки информацией.</li>
+            <li>✅Снижение веса, избавление от отеков и уменьшение целлюлита станут естественным следствием выстроенной
+              системы.</li>
+            <li>✅Вместо хаотичного питания появится индивидуально подобранный рацион, соответствующий именно вашим
+              потребностям.</li>
+            <li>✅Улучшится качество сна, восстановится режим дня, появится больше энергии и внутреннего баланса.</li>
+            <li>✅Уровень стресса снизится, а жизненные силы — наоборот, возрастут.</li>
+          </ul>
+          <p class="my-task__text">Для меня важно, чтобы вы чувствовали себя здоровыми и энергичными.</p>
+        </div>
+        <div class="my-task__block-img">
+          <img src="img/my-task-img.jpg" alt="my-task-img">
+        </div>
+      </div>
+
+    </section>
+    <section id="features" class="features">
+      <div class="features__intro">
+        <h2 class="features__title">Услуги</h2>
+      </div>
+      <div class="features__list">
+        <div class="features__card">
+          <div class="features__card-header">
+            <span class="features__icon"><img src="img/flower.png" alt="Персонализированные планы питания"></span>
+            <h3 class="features__card-title">Персонализированные планы питания</h3>
+          </div>
+          <p class="features__card-desc">Получите индивидуальный план питания, составленный специально под ваше тело и
+            цели. Я учту ваши особенности, пищевые
+            предпочтения и состояние здоровья, чтобы создать рацион, который подойдёт именно вам.</p>
+        </div>
+
+        <div class="features__card">
+          <div class="features__card-header">
+            <span class="features__icon"><img src="img/food.png" alt="Отслеживание и анализ продуктов питания"></span>
+            <h3 class="features__card-title">Отслеживание и анализ продуктов питания</h3>
+          </div>
+          <p class="features__card-desc">Отслеживайте своё питание легко и осознанно. Я проанализирую ваши пищевые
+            привычки, помогу определить слабые места и дам
+            персональные рекомендации для улучшения рациона.</p>
+        </div>
+        <div class="features__card">
+          <div class="features__card-header">
+            <span class="features__icon"><img src="img/plan.png" alt="Планирование питания и рецепты"></span>
+            <h3 class="features__card-title">Планирование питания и рецепты</h3>
+          </div>
+          <p class="features__card-desc">Получите подборку вкусных и полезных рецептов, адаптированных под ваши
+            диетические особенности. Я также составлю
+            персональный план питания, чтобы вам было проще придерживаться режима и с удовольствием питаться правильно.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="pricing" class="pricing">
+      <div class="pricing__intro">
+        <h2 class="pricing__title">Прайс-лист</h2>
+      </div>
+      <div class="pricing__content">
+        <div class="pricing__plans">
+          <div class="pricing__card">
+            <div class="pricing__card-header">
+              <h3 class="pricing__card-title">Разовая консультация:</h3>
+            </div>
+            <ol class="pricing__card-list">
+              <li>✅Анализ пищевого дневника.</li>
+              <li>✅Отслеживание и анализ продуктов питания</li>
+              <li>✅Подбор подходящего для вас КЖБУ в зависимости от цели</li>
+              <li>✅Рекомендации по физической активности и режиму дня.</li>
+              <li>✅Постановка цели и конкретные шаги по ее достижению</li>
+              <li>✅После получения рекомендаций возможность задавать вопросы в течении 3х дней</li>
+            </ol>
+            <div class="pricing__card-bottom">
+              <div class="pricing__card-price"><span class="pricing__card-amount">50 <span
+                    class="pricing__currency">бел. руб.</span></span></div>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <div class="pricing__card-header">
+              <h3 class="pricing__card-title">Ведение в течении 7 дней:</h3>
+            </div>
+            <ol class="pricing__card-list">
+              <li>✅Анализ пищевого дневника</li>
+              <li>✅Ответы на все ваши вопросы</li>
+              <li>✅Подбор подходящего для вас КЖБУ в зависимости от цели</li>
+              <li>✅Рекомендации по физической активности и режиму дня</li>
+              <li>✅Постановка цели и конкретные шаги по ее достижению</li>
+              <li>✅Индивидуальное составление плана питания исходя из вашего графика,потребностей и предпочтений</li>
+            </ol>
+            <div class="pricing__card-bottom">
+              <div class="pricing__card-price"><span class="pricing__card-amount">80 <span
+                    class="pricing__currency">бел. руб.</span></span><span class="pricing__card-period">/неделя</span>
+              </div>
+            </div>
+          </div>
+          <div class="pricing__card">
+            <div class="pricing__card-header">
+              <h3 class="pricing__card-title">Ведение в течении месяца:</h3>
+            </div>
+            <ol class="pricing__card-list">
+              <li>✅Анализ пищевого дневника.</li>
+              <li>✅Отслеживание и анализ продуктов питания</li>
+              <li>✅Подбор подходящего для вас КЖБУ в зависимости от цели</li>
+              <li>✅Рекомендации по физической активности и режиму дня.</li>
+              <li>✅Постановка цели и конкретные шаги по ее достижению</li>
+              <li>✅После получения рекомендаций возможность задавать вопросы в течении 3х дней</li>
+            </ol>
+            <div class="pricing__card-bottom">
+              <div class="pricing__card-price"><span class="pricing__card-amount">180 <span
+                    class="pricing__currency">бел. руб.</span></span><span class="pricing__card-period">/месяц</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contacts" class="contacts">
+      <div class="contacts__intro">
+        <h2 class="contacts__title">Контакты</h2>
+        <p class="contacts__desc">Свяжитесь со мной для консультации или задайте вопрос через форму обратной связи</p>
+      </div>
+      <div class="contacts__content">
+        <div class="contacts__social">
+          <h3 class="contacts__social-title">Мои социальные сети</h3>
+          <div class="contacts__social-links">
+            <a href="https://instagram.com/lapkaann" class="contacts__social-link" target="_blank" rel="noopener"
+              aria-label="Instagram">
+              <img src="img/icons8-instagram-72.png" alt="instagram">
+              <span>Instagram</span>
+            </a>
+            <a href="https://t.me/lapkaann" class="contacts__social-link" target="_blank" rel="noopener"
+              aria-label="Telegram">
+              <img src="img/icons8-телеграм-72.png" alt="telegram">
+              <span>Telegram</span>
+            </a>
+          </div>
+        </div>
+        <div class="contacts__form-wrapper">
+          <h3 class="contacts__form-title">Форма обратной связи</h3>
+          <form class="contacts__form" id="contact-form">
+            <div class="contacts__form-group">
+              <label for="name" class="contacts__form-label">Имя</label>
+              <input type="text" id="name" name="name" class="contacts__form-input" placeholder="Введите ваше имя"
+                required>
+            </div>
+            <div class="contacts__form-group">
+              <label for="email" class="contacts__form-label">Email</label>
+              <input type="email" id="email" name="email" class="contacts__form-input" placeholder="Введите ваш email"
+                required>
+            </div>
+            <div class="contacts__form-group">
+              <label for="message" class="contacts__form-label">Сообщение</label>
+              <textarea id="message" name="message" class="contacts__form-textarea" rows="5"
+                placeholder="Введите ваше сообщение" required></textarea>
+            </div>
+            <button type="submit" class="contacts__form-btn">Отправить</button>
+          </form>
+          <div class="contacts__form-status" id="form-status"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__social">
+        <a href="https://instagram.com/lapkaann" class="footer__social-link" target="_blank" rel="noopener"
+          aria-label="Instagram">
+          <img src="img/icons8-instagram-72.png" alt="instagram">
+        </a>
+        <a href="https://t.me/lapkaann" class="footer__social-link" target="_blank" rel="noopener"
+          aria-label="Telegram">
+          <img src="img/icons8-телеграм-72.png" alt="telegram">
+        </a>
+      </div>
+      <div class="footer__dev">
+        <a href="https://t.me/partymaker191" class="footer__dev-link">Разработка сайтов</a>
+      </div>
+      <div class="footer__copyright">
+        <span>Все права защищены © 2025</span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/modal.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/burger-menu.js"></script>
+  <script src="js/responsive-swap.js"></script>
+</body>
+
+</html>

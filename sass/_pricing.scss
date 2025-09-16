@@ -1,0 +1,317 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18.8%; // 300px/1596px
+    width: 100%;
+  }
+
+  &__title {
+    margin-top: 30px;
+    text-align: center;
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 2.5em;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: $color-underline;
+    -moz-text-decoration-color: $color-underline;
+  }
+
+  &__desc {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: $color-text-secondary;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__switcher {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 311px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 10px;
+    border: 1px solid #dcf1a7;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  &__tab {
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: $color-text-muted;
+    background: transparent;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    &--active {
+      background: #234338;
+      color: #fff;
+      border-radius: 6px;
+    }
+  }
+
+  &__save {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-text-muted;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &__plans {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__card {
+    background: $color-light;
+    border: 1px solid #eef8d3;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
+    min-width: 0;
+    flex: 1 1 0;
+    max-width: 370px;
+    box-sizing: border-box;
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    &__card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: #dcf1a7;
+    }
+  }
+  @media (hover: none) {
+    &__card:active {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+      border-color: #dcf1a7;
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__card-title {
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 30px;
+    color: $color-text-primary;
+    margin: 0;
+  }
+
+  &__card-offer {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-text-muted;
+  }
+
+  &__card-desc {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-text-primary;
+    margin: 0;
+  }
+
+  &__card-list {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: $color-text-secondary;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 12px;
+      padding-left: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__card-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 33px;
+    width: 100%;
+    min-height: 60px;
+  }
+
+  &__card-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  &__card-amount {
+    font-family: $font-urbanist;
+    font-weight: 700;
+    font-size: 50px;
+    color: $color-primary;
+    line-height: 0.88em;
+  }
+
+  &__card-period {
+    font-family: $font-urbanist;
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-text-secondary;
+    align-self: flex-end;
+  }
+
+  &__currency {
+    font-family: $font-urbanist;
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-primary;
+  }
+
+  &__card-btn {
+    font-family: $font-urbanist;
+    font-weight: 600;
+    font-size: 18px;
+    background: $color-accent;
+    color: $color-text-primary;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 41px;
+    cursor: pointer;
+    transition: background 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+  }
+  @media (hover: hover) {
+    &__card-btn:hover {
+      background: $color-accent-hover;
+      color: $color-dark;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+  @media (hover: none) {
+    &__card-btn:active {
+      background: $color-accent-hover;
+      color: $color-dark;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__intro {
+      padding: 0 5%;
+    }
+    &__content {
+      padding: 0 4%;
+    }
+    &__card {
+      padding: 30px 20px;
+    }
+    &__plans {
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 3%;
+    &__plans {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    &__card {
+      max-width: 100%;
+      width: 100%;
+      padding: 24px 10px;
+    }
+    &__switcher {
+      max-width: 100%;
+    }
+    &__title {
+      font-size: 26px;
+    }
+    &__desc {
+      font-size: 16px;
+    }
+    &__card {
+      padding: 24px 10px;
+      max-width: 100%;
+    }
+    &__card-title {
+      font-size: 28px;
+    }
+    &__card-list {
+      font-size: 15px;
+    }
+    &__card-amount {
+      font-size: 45px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 3%;
+    &__title {
+      font-size: 24px;
+    }
+    &__card-title {
+      font-size: 26px;
+    }
+    &__card-list {
+      font-size: 14px;
+    }
+    &__card-amount {
+      font-size: 40px;
+    }
+    &__card {
+      padding: 20px 8px;
+    }
+  }
+}
