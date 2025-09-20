@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
+    "dev": "nodemon --ignore dev-mails --ignore dev-mails/*.eml --ext js,json server.js",
     "install-deps": "npm install",
     "build": "sass sass/style.scss sass/style.css --style=expanded --source-map"
   },

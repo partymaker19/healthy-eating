@@ -27,6 +27,7 @@
     text-underline-offset: 10px;
     text-decoration-color: $color-underline;
     -moz-text-decoration-color: $color-underline;
+    font-family: "Merriweather", serif;
   }
 
   &__desc {
@@ -37,6 +38,7 @@
     text-transform: uppercase;
     padding-bottom: 0.3em;
     margin-top: 10px;
+    font-family: "Merriweather", serif;
   }
 
   &__desc-text {
@@ -160,10 +162,12 @@
 
     &__title {
       font-size: 26px;
+      text-align: center;
     }
 
     &__desc {
       font-size: 22px;
+      text-align: center;
     }
 
     &__desc-text {
